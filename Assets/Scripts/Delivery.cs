@@ -9,6 +9,8 @@ public class Delivery : MonoBehaviour
     [SerializeField] float destroyDelay = 0.1f;
     bool hasPickup;
     int points = 0;
+    [SerializeField] int doorOpens = 0;
+    [SerializeField] GameObject objectToDestroy; 
     [SerializeField] Color32 regularColor = new Color32(0, 0, 0, 0);
     [SerializeField] Color32 pickupColor = new Color32(0, 0, 0, 0);
 
@@ -39,6 +41,10 @@ public class Delivery : MonoBehaviour
             meshrenderer.material.color = regularColor;
             hasPickup = false;
             Debug.Log("Score: " + points);
-        }    
+        } 
+        if(points >= doorOpens)
+        {
+            Destroy(objectToDestroy, destroyDelay);
+        }   
     }
 }
