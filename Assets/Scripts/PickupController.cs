@@ -18,10 +18,15 @@ public class PickupController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > timeToAppear)
+        if (Time.time > timeToAppear)
         {
             meshrenderer.enabled = true;
         }
+        PickupRotator();
+    }
+
+    private void PickupRotator()
+    {
         float rotate = rotateSpeed * Time.deltaTime;
         transform.Rotate(0f, rotate, 0f);
     }

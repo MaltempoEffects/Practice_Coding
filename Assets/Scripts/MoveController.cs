@@ -17,10 +17,8 @@ public class MoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHor = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float moveVer = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        transform.Translate(moveHor, 0f, moveVer);
-    }
+        PlayerMove();
+    }  
     private void OnTriggerEnter(Collider other) 
     {
         if(other.tag == "SpeedUp")
@@ -31,5 +29,16 @@ public class MoveController : MonoBehaviour
         {
             moveSpeed = regularSpeed;
         }
+        if(other.tag == "Finish")
+        {
+            Debug.Log("Congratulations!");
+        }
     }
+    private void PlayerMove()
+    {
+        float moveHor = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float moveVer = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        transform.Translate(moveHor, 0f, moveVer);
+    }
+
 }
