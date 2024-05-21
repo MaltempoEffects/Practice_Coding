@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
+    - target: {fileID: 6877154045682522427, guid: 93d54559452c6449d8be42ee3a0591a6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -478,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900670559342321831, guid: dc7f30c419d4140eaa3f568d82f10a33, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8727529930813790454, guid: dc7f30c419d4140eaa3f568d82f10a33, type: 3}
       propertyPath: m_Name
@@ -877,9 +881,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedUp
       objectReference: {fileID: 0}
+    - target: {fileID: 4362387605362979854, guid: a75853c0cfb4f46cb837fb7f4049fdbd, type: 3}
+      propertyPath: m_TagString
+      value: SpeedUp
+      objectReference: {fileID: 0}
     - target: {fileID: 5238354992138716890, guid: a75853c0cfb4f46cb837fb7f4049fdbd, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6321340821592554730, guid: a75853c0cfb4f46cb837fb7f4049fdbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1070,7 +1078,15 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3739705714242531839, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
+      propertyPath: boost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739705714242531839, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
       propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739705714242531839, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
+      propertyPath: regularSpeed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4090318530187055870, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
@@ -1114,6 +1130,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4539219495705745854, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
+      propertyPath: doorOpens
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539219495705745854, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
+      propertyPath: objectToDestroy
+      value: 
+      objectReference: {fileID: 1564966508}
+    - target: {fileID: 4539219495705745854, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
       propertyPath: pickupColor.rgba
       value: 4279032549
       objectReference: {fileID: 0}
@@ -1126,6 +1150,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceee3bc79874f4a808cfe2eea305e9e9, type: 3}
+--- !u!1 &1564966508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6130414415491239873, guid: b2372b0bab10148258ee796530e32c87, type: 3}
+  m_PrefabInstance: {fileID: 8418531687982105251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1611132072
 PrefabInstance:
   m_ObjectHideFlags: 0

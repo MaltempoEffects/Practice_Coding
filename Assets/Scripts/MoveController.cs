@@ -5,7 +5,9 @@ using UnityEngine;
 public class MoveController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 0.1f;
-    
+    [SerializeField] float boost = 0.1f;
+    [SerializeField] float regularSpeed = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +20,16 @@ public class MoveController : MonoBehaviour
         float moveHor = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         float moveVer = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         transform.Translate(moveHor, 0f, moveVer);
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.tag == "SpeedUp")
+        {
+            moveSpeed = boost;
+        }
+        if(other.tag == "SlowDown")
+        {
+            moveSpeed = regularSpeed;
+        }
     }
 }
