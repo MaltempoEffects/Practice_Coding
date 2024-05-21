@@ -7,6 +7,7 @@ public class Delivery : MonoBehaviour
 {
     [SerializeField] float destroyDelay = 0.1f;
     bool hasPickup;
+    int points = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +25,12 @@ public class Delivery : MonoBehaviour
         {
             hasPickup = true;
             Destroy(other.gameObject, destroyDelay);
-            Debug.Log("Pick!");
         }
         if(other.tag == "Delivery" && hasPickup)
         {
+            points++;
             hasPickup = false;
-            Debug.Log("Delivered!");
+            Debug.Log("Score: " + points);
         }    
     }
 }
